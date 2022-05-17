@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-17T20:02:35.429Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.47" etag="BY9ZzJaOU6tSGMy2Y6qL" version="18.0.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-17T20:04:33.145Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.47" etag="KWcP7H9lzOTffrcinlX2" version="18.0.6" type="github">
   <diagram id="79L0zd2CAYpctcNah1aL" name="Page-1">
-    <mxGraphModel dx="2370" dy="1333" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2500" pageHeight="2500" background="none" math="0" shadow="0">
+    <mxGraphModel dx="2365" dy="1288" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2500" pageHeight="2500" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -237,18 +237,6 @@
             <mxPoint x="660" y="1135" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Da95Gq-gE2n_cmG5Mv9B-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.457;entryY=1.085;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=oval;endFill=0;" edge="1" parent="1" source="pRwcVsKf7JXOqhex1r0V-71" target="Da95Gq-gE2n_cmG5Mv9B-2">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="vZo0TXLzW51MzK5w138T-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;shadow=0;startArrow=none;startFill=0;endArrow=oval;endFill=0;fillColor=#000000;gradientColor=none;" edge="1" parent="1" source="pRwcVsKf7JXOqhex1r0V-71">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="773" y="1060" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="773" y="1068" />
-              <mxPoint x="773" y="1040" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="pRwcVsKf7JXOqhex1r0V-71" value="Possiede" style="rhombus;whiteSpace=wrap;html=1;rounded=0;fontSize=20;" parent="1" vertex="1">
           <mxGeometry x="730" y="1095" width="170" height="80" as="geometry" />
         </mxCell>
@@ -472,12 +460,6 @@
         </mxCell>
         <mxCell id="QA1GxYHZriVHKl0OtON5-2" value="Costo" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="330" y="1095" width="50" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="Da95Gq-gE2n_cmG5Mv9B-2" value="Attributo" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="850" y="1072.5" width="60" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="vZo0TXLzW51MzK5w138T-5" value="procioni carnivori" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="725" y="1035" width="110" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
