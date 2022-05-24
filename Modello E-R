@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-05-24T14:23:07.853Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="J_O3GtjxNFQkW0_H51yV" version="18.1.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-05-24T14:40:18.519Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36 Edg/101.0.1210.53" etag="qZzFccW4SIuNVWacRz1B" version="18.1.1" type="github">
   <diagram id="79L0zd2CAYpctcNah1aL" name="Page-1">
-    <mxGraphModel dx="1237" dy="697" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2500" pageHeight="2500" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1237" dy="696" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2500" pageHeight="2500" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -527,7 +527,19 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="FSAN6feIotQ4kL1uZB2n-58" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.489;entryY=0.995;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;endArrow=oval;endFill=0;" parent="1" source="IvOeWlM_sTjuzWXVjZgO-57" target="FSAN6feIotQ4kL1uZB2n-57" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1894" y="1195" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GH6SbQC-cJVYNrMQ_EOW-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.512;entryY=1.07;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=oval;endFill=0;" edge="1" parent="1" source="IvOeWlM_sTjuzWXVjZgO-57" target="GH6SbQC-cJVYNrMQ_EOW-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1830" y="1230" />
+              <mxPoint x="1896" y="1230" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="IvOeWlM_sTjuzWXVjZgO-57" value="PADIGLIONE" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
           <mxGeometry x="1670" y="1180" width="160" height="60" as="geometry" />
@@ -613,8 +625,8 @@
         <mxCell id="FSAN6feIotQ4kL1uZB2n-54" value="Personaggio" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="530" y="1590" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="FSAN6feIotQ4kL1uZB2n-57" value="Capacità" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="1830" y="1165" width="60" height="20" as="geometry" />
+        <mxCell id="FSAN6feIotQ4kL1uZB2n-57" value="CapienzaPersone" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="1840" y="1160" width="110" height="20" as="geometry" />
         </mxCell>
         <mxCell id="tv0r2YY2uy2MBitiKbV3-2" value="Cognome" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="630" y="1315" width="70" height="20" as="geometry" />
@@ -627,6 +639,9 @@
         </mxCell>
         <mxCell id="GH6SbQC-cJVYNrMQ_EOW-9" value="CapienzaTotale" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="965" y="992.5" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="GH6SbQC-cJVYNrMQ_EOW-11" value="CapacitàStand" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="1200" width="90" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
