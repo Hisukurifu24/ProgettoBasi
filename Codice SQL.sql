@@ -1,4 +1,4 @@
-cidrop table if exists Fiera;
+drop table if exists Fiera;
 drop table if exists Area;
 drop table if exists Collegamento;
 drop table if exists Stand;
