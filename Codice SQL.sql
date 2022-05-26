@@ -1,4 +1,4 @@
-drop table if exists Fiera;
+cidrop table if exists Fiera;
 drop table if exists Area;
 drop table if exists Collegamento;
 drop table if exists Stand;
@@ -14,7 +14,7 @@ create table Fiera (
 	Nome			VARCHAR(50)	 	not null,
 	Anno			int			 	not null,
 	Città			varchar(50)	 	not null,
-	CapienzaTotale	int			 	not null,
+	CapienzaTotale	int			 	,
 	primary key(Nome, Anno)
 );
 
@@ -119,3 +119,94 @@ create table Biglietto(
 );
 alter table Persona
 add foreign key(Biglietto) references Biglietto(Codice) on update cascade on delete cascade
+
+
+
+-- inserts
+
+
+insert into Fiera (Nome, Anno, Città, CapienzaTotale) values
+("Romics", 2022, "Roma", null),
+("Etna Comics", 2022, "Catania", null),
+("Lucca Comics", 2022, "Lucca", null),
+("Milan Games Week", 2022, "Rho", null),
+("Napoli Comicon", 2022, "Napoli", null),
+("Modena Nerd", 2022, "Modena", null),
+("GameCom Pordenone", 2022, "Pordenone", null),
+("RiminiComix", 2022, "Rimini", null),
+("TorinoComics", 2022, "Torino", null),
+("Romics", 2021, "Roma", null),
+("Etna Comics", 2021, "Catania", null),
+("Lucca Comics", 2021, "Lucca", null),
+("Milan Games Week", 2021, "Rho", null),
+("Napoli Comicon", 2021, "Napoli", null),
+("Modena Nerd", 2021, "Modena", null),
+("GameCom Pordenone", 2021, "Pordenone", null),
+("RiminiComix", 2021, "Rimini", null),
+("TorinoComics", 2021, "Torino", null),
+("Romics", 2020, "Roma", null),
+("Etna Comics", 2020, "Catania", null),
+("Lucca Comics", 2020, "Lucca", null),
+("Milan Games Week", 2020, "Rho", null),
+("Napoli Comicon", 2020, "Napoli", null),
+("Modena Nerd", 2020, "Modena", null),
+("GameCom Pordenone", 2020, "Pordenone", null),
+("RiminiComix", 2020, "Rimini", null),
+("TorinoComics", 2020, "Torino", null),
+("Romics", 2019, "Roma", null),
+("Etna Comics", 2019, "Catania", null),
+("Lucca Comics", 2019, "Lucca", null),
+("Milan Games Week", 2019, "Rho", null),
+("Napoli Comicon", 2019, "Napoli", null),
+("Modena Nerd", 2019, "Modena", null),
+("GameCom Pordenone", 2019, "Pordenone", null),
+("RiminiComix", 2019, "Rimini", null),
+("TorinoComics", 2019, "Torino", null),
+("Romics", 2018, "Roma", null),
+("Etna Comics", 2018, "Catania", null),
+("Lucca Comics", 2018, "Lucca", null),
+("Milan Games Week", 2018, "Rho", null),
+("Napoli Comicon", 2018, "Napoli", null),
+("Modena Nerd", 2018, "Modena", null),
+("GameCom Pordenone", 2018, "Pordenone", null),
+("RiminiComix", 2018, "Rimini", null),
+("TorinoComics", 2018, "Torino", null),
+("Romics", 2017, "Roma", null),
+("Etna Comics", 2017, "Catania", null),
+("Lucca Comics", 2017, "Lucca", null),
+("Milan Games Week", 2017, "Rho", null),
+("Napoli Comicon", 2017, "Napoli", null),
+("Modena Nerd", 2017, "Modena", null),
+("GameCom Pordenone", 2017, "Pordenone", null),
+("RiminiComix", 2017, "Rimini", null),
+("TorinoComics", 2017, "Torino", null),
+("Romics", 2016, "Roma", null),
+("Etna Comics", 2016, "Catania", null),
+("Lucca Comics", 2016, "Lucca", null),
+("Milan Games Week", 2016, "Rho", null),
+("Napoli Comicon", 2016, "Napoli", null),
+("Modena Nerd", 2016, "Modena", null),
+("GameCom Pordenone", 2016, "Pordenone", null),
+("RiminiComix", 2016, "Rimini", null),
+("TorinoComics", 2016, "Torino", null),
+("Romics", 2015, "Roma", null),
+("Etna Comics", 2015, "Catania", null),
+("Lucca Comics", 2015, "Lucca", null),
+("Milan Games Week", 2015, "Rho", null),
+("Napoli Comicon", 2015, "Napoli", null),
+("Modena Nerd", 2015, "Modena", null),
+("GameCom Pordenone", 2015, "Pordenone", null),
+("RiminiComix", 2015, "Rimini", null),
+("TorinoComics", 2015, "Torino", null),
+
+update Fiera f1
+set CapienzaTotale = (
+	select sum(a.CapienzaPersone)
+	from Area a
+	where f2.Nome = a.Fiera
+	and f2.Anno = a.Anno
+	group by f2.nome, f2.anno
+)
+from Fiera f2
+where f1.nome = f2.nome
+and f1.anno = f2.anno
