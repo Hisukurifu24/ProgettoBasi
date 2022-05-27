@@ -771,7 +771,7 @@ and f1.anno = f2.anno
 
 select nome, cognome
 from Persona, Visita
-where Persona.codicefisale = Visita.codicefiscale, fiera = "Romics", anno = "2022"
+where Persona.cf = Visita.persona and Visita.fiera = 'Romics' and Visita.anno = 2022;
 
 -- Trova quante persone che hanno visitato Romics 2022
 
