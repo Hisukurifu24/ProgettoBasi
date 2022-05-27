@@ -771,16 +771,19 @@ and f1.anno = f2.anno
 
 select nome, cognome
 from Persona, Visita
-where Persona.codicefisale = Visita.codicefiscale, fiera = "Romics", anno = "2022"
+where Persona.CF = Visita.Persona AND Visita.Fiera = 'Romics' AND Visita.Anno = 2022;
 
 -- Trova quante persone che hanno visitato Romics 2022
 
 select count(nome)
 from Persona, Visita
-where Persona.codicefisale = Visita.codicefiscale, fiera = "Romics", anno = "2022"
+where Persona.CF = Visita.Persona AND Visita.Fiera = 'Romics' AND Visita.Anno = 2022;
+--16
 
 -- Trova la quantità di articoli venduti da uno stand
 
-select sum(Quantità)
+
+select Stand.id, Stand.nome, sum(Quantità)
 from Stand, Vendita
-where Stand.id = Vendita.stand and Stand.id = "TSFEJ3PF"
+where Stand.id = Vendita.stand
+group by Stand.id;
