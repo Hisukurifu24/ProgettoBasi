@@ -125,13 +125,13 @@ add foreign key(Biglietto) references Biglietto(Codice) on update cascade on del
 
 -- inserts
 
-insert into Vendita() values
+insert into Vendita(Stand, Articolo, Nome, Quantità) values
 
-insert int Tematica() values
+insert int Tematica(Stand, Tema, Data) values
 
-insert into Visita() values
+insert into Visita(Persona, Fiera, Anno) values
 
-insert into Collegamento() values
+insert into Collegamento(Area1, Area2) values
 ("AAAA","BBBB"),
 ("AAAA","BBBB"),
 ("AAAA","BBBB"),
