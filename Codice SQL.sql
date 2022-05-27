@@ -119,7 +119,7 @@ create table Biglietto(
 	check(Validità>=Data)
 );
 alter table Persona
-add foreign key(Biglietto) references Biglietto(Codice) on update cascade on delete cascade
+add foreign key(Biglietto) references Biglietto(Codice) on update cascade on delete cascade;
 
 
 
@@ -187,7 +187,7 @@ insert into Vendita(Stand, Articolo, Nome, Quantità) values
 ("NVU08NT8", "55264-005", "maglietta", 1),
 ("LE5A1XPT", "49349-694", "maglietta", 10);
 
-insert int Tematica(Stand, Tema, Data) values
+insert into Tematica(Stand, Tema, Data) values
 ("FA12KH0K","Lotlux","2004-08-03"),
 ("UPVSPCZ7","Zathin","2000-05-04"),
 ("71SOW586","Alpha","2016-12-07"),
@@ -301,7 +301,7 @@ insert into Visita(Persona, Fiera, Anno) values
 ("AI41DJRPZDHO6GSR", "Romics", 2019),
 ("JXJ0YW88O17SMGGL", "RiminiComix", 2015);
 
-insert into Collegamento() values
+insert into Collegamento(Area1, Area2) values
 ("A346","A493"),
 ("A648","A164"),
 ("A493","A648"),
@@ -551,7 +551,7 @@ insert into Biglietto (Codice, Data, Validità, Prezzo, Tipo, Persona) values
 ("0XAZUT45732ZHGC0","2020-06-26","2020-07-03",00.99,"Intero","XIXN4UGRKAGUPKY8"),
 ("ZUIA73FL0ALVBDX3","2021-12-25","2022-01-01",37.99,"VIP","LKVB84XEKLCXEHSZ"),
 ("YGINN0MAJXKXQBVR","2015-10-20","2015-10-27",73.99,"VIP","GHPXU311WMWS3L68"),
-("6ISWODCR3TI8FOOX","2020-03-30","2020-04-06".99.99,"VIP","2F8Y5QGO71F9DT2I"),
+("6ISWODCR3TI8FOOX","2020-03-30","2020-04-06",99.99,"VIP","2F8Y5QGO71F9DT2I"),
 ("L58K7HQN7TET1FXJ","2019-11-07","2019-11-14",78.99,"VIP","6L0G6G5IFGTFYNOA"),
 ("D0UL23CXL5RB26I3","2020-02-22","2020-02-29",90.99,"Intero","GPT9HID4CIXFUIX3");
 
@@ -630,7 +630,7 @@ insert into Area (Codice, Esterno, CapienzaPersone, CapacitàStand, Fiera, Anno)
 ("X361", false, 2000, 20, "TorinoComics", 2019);
 
 insert into Articolo (NumeroSerie, Nome, Prezzo) values 
-("49349-694", "maglietta", 14.99);
+("49349-694", "maglietta", 14.99),
 ("55264-005", "maglietta", 14.99),
 ("48951-8113", "maglietta", 14.99),
 ("51672-4118", "maglietta", 14.99),
