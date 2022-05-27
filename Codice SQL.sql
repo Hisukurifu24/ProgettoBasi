@@ -768,22 +768,28 @@ and f1.anno = f2.anno
 -- queries
 
 -- Trova le persone che hanno visitato Romics 2022
-
 select nome, cognome
 from Persona, Visita
 where Persona.cf = Visita.persona and Visita.fiera = 'Romics' and Visita.anno = 2022;
 
--- Trova quante persone che hanno visitato Romics 2022
 
+-- Trova quante persone che hanno visitato Romics 2022
 select count(nome)
 from Persona, Visita
 where Persona.CF = Visita.Persona AND Visita.Fiera = 'Romics' AND Visita.Anno = 2022;
 --16
 
+
 -- Trova la quantità di articoli venduti da uno stand
-
-
 select Stand.id, Stand.nome, sum(Quantità)
 from Stand, Vendita
 where Stand.id = Vendita.stand
 group by Stand.id;
+
+
+-- Trova gli stand che hanno venduto più di 5 articoli
+select Stand.id, Stand.nome, sum(Quantità)
+from Stand, Vendita
+where Stand.id = Vendita.stand
+group by Stand.id
+having sum(Quantità) > 5;
