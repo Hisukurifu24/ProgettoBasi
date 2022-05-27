@@ -124,6 +124,69 @@ add foreign key(Biglietto) references Biglietto(Codice) on update cascade on del
 
 
 -- inserts
+
+insert into Vendita() values
+
+insert int Tematica() values
+
+insert into Visita() values
+
+
+insert into Collegamento() values
+
+insert into Stand(ID, Nome, Area) values
+("FA12KH0K","Y-find","6I6D"),
+("UPVSPCZ7","Solarbreeze","BD55"),
+("71SOW586","Treeflex","XT6O"),
+("PPDMRQCA","Daltfresh","VB2A"),
+("MHJHAYTC","Daltfresh","QVN3"),
+("ZHCUD89Q","Konklux","WI7Q"),
+("XBGQS84N","Sub-Ex","T13U"),
+("R8YBJ5X4","Mat Lam Tam","8AUJ"),
+("JM9XNZIT","Tresom","F55H"),
+("Z9B8K6O1","Asoka","RDZF"),
+("P12X2WW7","Otcom","LGVW"),
+("QQ0M3US4","Regrant","H12U"),
+("CAT50HHY","Sub-Ex","3ZPN"),
+("TSFEJ3PF","Fintone","FHAK"),
+("XLI1TFVM","Ronstring","ZRON"),
+("8ZDVDGMG","Solarbreeze","ZL2U"),
+("CM7J59XH","Pannier","B1NR"),
+("8NIVVLYN","Matsoft","YKC7"),
+("YHJ7H8DX","Fintone","YB1U"),
+("NVU08NT8","Gembucket","F7CT"),
+("LUGBI291","Sonair","UEKU"),
+("1SAC7RKN","Ventosanzap","772U"),
+("LE5A1XPT","Cookley","AGCT"),
+("7QAKWUED","Zamit","MDU5"),
+("ZIQ10XQ4","Bamity","43WC"),
+("X9JXYRZ9","Vagram","TJC4"),
+("SOP5UOME","Tresom","EXTN"),
+("H40HM4ZQ","Job","YHXC"),
+("IOC8WFQ2","Cardguard","NYXJ"),
+("I67QU4OO","Zontrax","X4B4"),
+("ZRW7GQ6E","Regrant","QCMV"),
+("0R29N03D","Quo Lux","QGAU"),
+("MPVHBH6T","Regrant","E9DA"),
+("I7SWCZ5R","Zontrax","DHG5"),
+("JKI5WC72","Greenlam","8LE6"),
+("RX8TJ28X","Wrapsafe","7E77"),
+("6CK4VGHU","Viva","PFAH"),
+("QA3HPU6R","Lotlux","FJ5Z"),
+("KW6D1SC0","Duobam","MBZI"),
+("UIRNU0EH","Asoka","IO8I"),
+("UTTG9RO0","Cookley","ROD3"),
+("VO6M3296","Andalax","YQI6"),
+("LDMXLSKV","Prodder","GSGW"),
+("Q6VVO2J6","Alphazap","JUWE"),
+("0HKGKBRG","Flowdesk","I7FT"),
+("LOTXNLMF","Matsoft","PSXH"),
+("D9RY727Y","Aerified","Q4VG"),
+("BY7ZQN0B","Domainer","MM4F"),
+("K1JYUE6L","Span","KDR1"),
+("KP0ZUPS9","Trippledex","C430");
+
+
 insert into Tema(Nome, DataUscita, Autore, Tipo) values
 ("Lotlux","2004-08-03","Heidi McGall","Film"),
 ("Zathin","2000-05-04","Audrye Aldritt","Fumetto"),
@@ -175,8 +238,6 @@ insert into Tema(Nome, DataUscita, Autore, Tipo) values
 ("Overhold","2001-09-10","Blair Fairham","Gioco"),
 ("It","2015-12-10","Mic Askwith","Fumetto"),
 ("Alpha","2016-02-21","Tanhya Churchard","Film");
-
-insert into Visita()
 
 insert into Persona(CF,Nome,Cognome,DataNascita,Stato,Città,Via,N_Civico,Mail,Telefono,Tipo,Giornale,Scuola,Personaggio,Settore,Stipendio,Staff,Biglietto) values
 "1PLOWU4HNTADNS8P","Keane","Tillett","1978-01-25","Philippines","Caracal","Buell",97,"ktillett0@netlog.com",978043686586,"Bambino",null,null,null,null,null,null,"I036ZN549HVC37TK"
@@ -282,7 +343,7 @@ insert into Biglietto (Codice, Data, Validità, Prezzo, Tipo, Persona) values
 ("L58K7HQN7TET1FXJ","2019-11-07","2019-11-14",78.99,"VIP","Y9GEAW9RT0SE1Z70"),
 ("D0UL23CXL5RB26I3","2020-02-22","2020-02-29",90.99,"Intero","AY0ON9H24F9H2YFM");
 
-insert into area (codice, esterno, capienzapersone, capacitàstand, fiera, anno) values
+insert into Area (Codice, Esterno, CapienzaPersone, CapacitàStand, Fiera, Anno) values
 ("A346", true, null, null, "Romics", 2021),
 ("A493", false, 1000, 20, "Romics", 2021),
 ("A648", false, 1000, 20, "Romics", 2021),
