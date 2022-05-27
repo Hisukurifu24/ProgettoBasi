@@ -767,3 +767,12 @@ set CapienzaTotale = (
 from Fiera f2
 where f1.nome = f2.nome
 and f1.anno = f2.anno
+
+
+-- queries
+
+-- Trova le persone che hanno visitato Romics 2022
+
+-- Trova quante persone che hanno visitato Romics 2022
+
+-- Trova la quantità di articoli venduti da uno stand
