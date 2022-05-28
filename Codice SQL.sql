@@ -801,12 +801,13 @@ having sum(Quantità) > 5;
 
 -- Mostra gli stand che appartengono a un padiglione al chiuso di una determinata fiera e che hanno una certa tematica 
 -- (nell'esempio tematica: Lotlux, fiera: Romics 2021)
-select Stand.nome, Tematica.tema, Tema.tipo, Tematica.data
+select Stand.nome, Tematica.tema, Area.codice
 from Area, Stand, Tematica, Tema
 where Stand.area = Area.codice and Area.esterno = false and 
       Tematica.stand = Stand.id and Area.fiera = 'Romics' and
       Area.anno = '2021' and Tematica.tema = 'Lotlux'
-group by Stand.nome, Tematica.tema, Tematica.data
+group by Stand.nome, Tematica.tema, Area.codice
+order by Stand.nome
 
 
 
