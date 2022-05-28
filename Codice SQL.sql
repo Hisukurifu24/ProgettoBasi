@@ -768,19 +768,20 @@ and f1.anno = f2.anno
 -- queries
 
 -- Trova le persone che hanno visitato Romics 2022 (visitato intende solo visitstori, partecipato intende anche lavoratori)
-select nome, cognome
+select nome, cognome, tipo
 from Persona, Visita
 where Persona.cf = Visita.persona and 
       Visita.fiera = 'Romics' and 
       Visita.anno = 2022 and
-      Persona.staff = null;
+      Persona.Tipo != 'Staff';
 
 
 -- Trova quante persone che hanno partecipato a Romics 2022
-select count(nome)
+select Visita.Fiera, Visita.Anno, count(nome) as Partecipanti
 from Persona, Visita
 where Persona.CF = Visita.Persona AND
-	Visita.Fiera = 'Romics' AND Visita.Anno = 2022;
+	Visita.Fiera = 'Romics' AND Visita.Anno = 2022
+group by Visita.Fiera, Visita.Anno;
 --16
 
 
@@ -811,5 +812,7 @@ order by Stand.nome
 
 
 
+--indice
 
+create index idx_Temi on Tema(Nome)
 
