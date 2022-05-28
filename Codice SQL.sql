@@ -814,5 +814,5 @@ order by Stand.nome
 
 --indice
 
-create index idx_Temi on Tema(Nome)
+create index idx_Temi on Tema(Nome, DataUscita)
 
