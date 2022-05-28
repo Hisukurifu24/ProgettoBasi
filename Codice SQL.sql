@@ -429,7 +429,7 @@ insert into Area (Codice, Esterno, CapienzaPersone, CapacitàStand, Fiera, Anno)
 
 insert into Stand(ID, Nome, Area) values
 ('FA12KH0K','Y-find','A493'),
-('UPVSPCZ7','Solarbreeze','A493'),
+('UPVSPCZ7','Solarbreeze','A648'),
 ('71SOW586','Treeflex','A493'),
 ('PPDMRQCA','Daltfresh','A648'),
 ('MHJHAYTC','Daltfresh','A576'),
