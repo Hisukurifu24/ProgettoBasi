@@ -595,8 +595,8 @@ insert into Vendita(Stand, Articolo, Nome, Quantità) values
 
 insert into Tematica(Stand, Tema, Data) values
 ('FA12KH0K','Lotlux','2004-08-03'),
-('UPVSPCZ7','Zathin','2000-05-04'),
-('71SOW586','Alpha','2016-12-07'),
+('UPVSPCZ7','Lotlux','2000-12-13'),
+('71SOW586','Lotlux','1999-07-29'),
 ('PPDMRQCA','Fix San','1992-03-25'),
 ('MHJHAYTC','Tresom','1990-12-16'),
 ('ZHCUD89Q','Greenlam','2005-07-20'),
@@ -767,23 +767,27 @@ and f1.anno = f2.anno
 
 -- queries
 
--- Trova le persone che hanno visitato Romics 2022
+-- Trova le persone che hanno visitato Romics 2022 (visitato intende solo visitstori, partecipato intende anche lavoratori)
 select nome, cognome
 from Persona, Visita
-where Persona.cf = Visita.persona and Visita.fiera = 'Romics' and Visita.anno = 2022;
+where Persona.cf = Visita.persona and 
+      Visita.fiera = 'Romics' and 
+      Visita.anno = 2022 and
+      Persona.staff = null;
 
 
--- Trova quante persone che hanno visitato Romics 2022
+-- Trova quante persone che hanno partecipato a Romics 2022
 select count(nome)
 from Persona, Visita
-where Persona.CF = Visita.Persona AND Visita.Fiera = 'Romics' AND Visita.Anno = 2022;
+where Persona.CF = Visita.Persona AND Visita.Fiera = 'Romics' AND 
+      Visita.Anno = 2022;
 --16
 
 
--- Trova la quantità di articoli venduti da uno stand
+-- Trova la quantità di articoli venduti da uno stand il cui prezzo supera i 5 euro
 select Stand.id, Stand.nome, sum(Quantità)
-from Stand, Vendita
-where Stand.id = Vendita.stand
+from Stand, Vendita, Articolo
+where Stand.id = Vendita.stand and Articolo.prezzo > 5
 group by Stand.id;
 
 
@@ -793,3 +797,18 @@ from Stand, Vendita
 where Stand.id = Vendita.stand
 group by Stand.id
 having sum(Quantità) > 5;
+
+
+-- Mostra gli stand che appartengono a un padiglione al chiuso di una determinata fiera e che hanno una certa tematica 
+-- (nell'esempio tematica: Lotlux, fiera: Romics 2021)
+select Stand.nome, Tematica.tema
+from Area, Stand, Tematica
+where Stand.area = Area.codice and Area.esterno = false and 
+      Tematica.stand = Stand.id and Area.fiera = 'Romics' and
+      Area.anno = '2021' and Tematica.tema = 'Lotlux'
+group by Stand.nome, Tematica.tema, Tematica.data
+
+
+
+
+
