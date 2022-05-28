@@ -779,8 +779,8 @@ where Persona.cf = Visita.persona and
 -- Trova quante persone che hanno partecipato a Romics 2022
 select count(nome)
 from Persona, Visita
-where Persona.CF = Visita.Persona AND Visita.Fiera = 'Romics' AND 
-      Visita.Anno = 2022;
+where Persona.CF = Visita.Persona AND
+	Visita.Fiera = 'Romics' AND Visita.Anno = 2022;
 --16
 
 
@@ -804,8 +804,8 @@ having sum(Quantità) > 5;
 select Stand.nome, Tematica.tema, Area.codice
 from Area, Stand, Tematica, Tema
 where Stand.area = Area.codice and Area.esterno = false and 
-      Tematica.stand = Stand.id and Area.fiera = 'Romics' and
-      Area.anno = '2021' and Tematica.tema = 'Lotlux'
+      Tematica.stand = Stand.id and Tematica.tema = 'Lotlux' and
+	  Area.fiera = 'Romics' and Area.anno = '2021'
 group by Stand.nome, Tematica.tema, Area.codice
 order by Stand.nome
 
